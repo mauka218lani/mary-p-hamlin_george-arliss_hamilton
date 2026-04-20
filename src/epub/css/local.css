@@ -1,2 +1,76 @@
 @charset "utf-8";
 @namespace epub "http://www.idpf.org/2007/ops";
+
+/* Begin dramatis personae */
+[epub|type~="z3998:dramatis-personae"]{
+	text-align: center;
+}
+
+[epub|type~="z3998:dramatis-personae"] p{
+	text-indent: 0;
+}
+
+[epub|type~="z3998:dramatis-personae"] ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+[epub|type~="z3998:dramatis-personae"] ul li{
+	font-style: italic;
+	margin: 1em;
+}
+/* End dramatis personae */
+
+/* Begin costumes */
+#costumes header{
+	font-variant: small-caps;
+	margin-top: 2em;
+}
+
+#costumes header + p{
+	margin-top: 1em;
+	text-indent: 1em;
+}
+/* End costumes */
+
+/* Begin playbill */
+#original-playbill p{
+	text-align: center;
+}
+
+#original-plabill th,
+td{
+	padding-left: 2em;
+	padding-right: 2em;
+}
+
+#original-playbill > *{
+	display: inline-block;
+	margin: auto;
+	margin-top: 3em;
+	max-width: 80%;
+}
+
+@supports(display: flex){
+	#original-playbill{
+		align-items: center;
+		box-sizing: border-box;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		min-height: calc(98vh - 3em);
+		padding-top: 3em;
+	}
+
+	#original-playbill span{
+		letter-spacing: .2em;
+		margin-right: -0.2em;
+	}
+
+	#playbill-1 p{
+		text-align: initial;
+		text-indent: 0;
+	}
+	/* End playbill */
+}
