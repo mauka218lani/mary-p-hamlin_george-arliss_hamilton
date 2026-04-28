@@ -131,6 +131,12 @@ i [epub|type~="z3998:persona"]{
 	font-style: normal;
 }
 
+/* special to render small caps not italic for non-semantic embedded in stage direction */
+[epub|type~="z3998:stage-direction"] b{
+	font-style: normal;
+}
+/* end special */
+
 abbr[epub|type~="z3998:stage-direction"]{
 	font-style: normal;
 	font-variant: all-small-caps;
